@@ -2,8 +2,8 @@ import {useState} from 'react';
 import './App.css';
 
 function App() {
-const [Mailit, setMailit] = useState('')
-const [Kilometrit, setKilometrit] = useState('')
+const [Mailit, setMailit] = useState(0)
+const [Kilometrit, setKilometrit] = useState(0)
 function laske(e){
   e.preventDefault()
   const tulos = Mailit * 1.609
@@ -23,7 +23,7 @@ function laske(e){
     </div>
     <div>
       <label>Kilometrit</label>
-      <output>{Kilometrit}</output>
+      <output>{Kilometrit.toFixed(2)}</output>
     </div>
     <button>Laske</button>
   </form>
